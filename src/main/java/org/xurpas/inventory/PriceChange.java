@@ -199,13 +199,10 @@ public class PriceChange {
                 _base_class.setMaster("sTransNox", MiscUtil.getNextCode(_base_class.getMasterTable(), "sTransNox", true, _synapse.getConnection().getConnection(), _branchcd));
                 _base_class.setMaster("sBranchCd", _branchcd);
                 _base_class.setMaster("dTransact", _synapse.getServerDate());
-                _base_class.setMaster(0, MiscUtil.getNextCode(_base_class.getMasterTable(), "sTransNox", true, _synapse.getConnection().getConnection(), _branchcd));
-                _base_class.setMaster(1, _branchcd);
-                _base_class.setMaster(2, _synapse.getServerDate());
                 
-                System.out.println(_base_class.getMaster(0));
-                System.out.println(_base_class.getMaster(1));
-                System.out.println(_base_class.getMaster(2));
+                System.out.println(_base_class.getMaster("sTransNox"));
+                System.out.println(_base_class.getMaster("sBranchCd"));
+                System.out.println(_base_class.getMaster("dTransact"));
             }
 
             @Override
